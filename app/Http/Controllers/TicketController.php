@@ -49,14 +49,6 @@ class TicketController extends Controller
         //     $nuevacalineaetiqueta ->id_etiqueta = $request->post('id_etiqueta');
         //     $nuevacalineaetiqueta  ->save();
         // }
-
-        // $nuevoticket = ticket::create([
-        //     'id_usuario' => 1,
-        //     'id_estado' => 1,
-        //     'id_prioridad' => $request->id_prioridad,
-        //     'titulo' => $request->titulo,
-        //     'descripcion' => $request->descripcion,
-        // ]);
     }
 
 }
