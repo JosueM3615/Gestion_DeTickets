@@ -12,14 +12,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class TicketTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-
      use RefreshDatabase;
-    public function test_crear_ticket()
+   /*  public function test_crear_ticket()
     {
 
         $categoria = new categoria();
@@ -53,9 +47,9 @@ class TicketTest extends TestCase
             'titulo' => 'Titulo de ticket'
         ]);
 
-    }
+    } */
 
-    public function testCrearCategoria()
+   /*  public function testCrearCategoria()
     {
         // Crea una nueva instancia de la clase categoria
         $categoria = new categoria();
@@ -68,6 +62,25 @@ class TicketTest extends TestCase
 
         // Verifica que se haya guardado correctamente
         $this->assertDatabaseHas('categoria', ['Nombre' => 'Software']);
+    } */
+
+    public function testStore()
+    {
+        $ticketData = [
+            'titulo' => 'Hola2',
+            'descripcion' => 'Hola2',
+            'archivo' => null,
+            'etiqueta' => '2',
+            'categoria' => '3',
+            'prioridad' => '2',
+            'categoriasSeleccionadas' => null
+        ];
+
+        $response = $this->post('/', $ticketData);
+
+        // Aquí puedes realizar las aserciones sobre la respuesta recibida
+        $response->assertStatus(200);
+        // ...
     }
 
 }

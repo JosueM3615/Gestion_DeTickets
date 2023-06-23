@@ -27,6 +27,9 @@ class TicketController extends Controller
 
     public function store(Request $request)
     {
+
+        dd($request->post());
+
         $validator = Validator::make($request->all(), [
             'titulo' => 'required',
             'descripcion' => 'required',

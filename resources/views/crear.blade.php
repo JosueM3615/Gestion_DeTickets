@@ -20,25 +20,23 @@
                 @endforeach
             </select>
 
-            <select name="categoria" id="categoria" >
+            <select name="categoria" id="categoria">
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria->id_categoria }}">{{ $categoria->Nombre }}</option>
                 @endforeach
             </select>
 
-            <select name="prioridad" id="prioridad" >
+            <select name="prioridad" id="prioridad">
                 @foreach ($prioridades as $prioridad)
                     <option value="{{ $prioridad->id_prioridad }}">{{ $prioridad->Nombre }}</option>
                 @endforeach
             </select>
-
 
             <div id="miDiv">
                 <button class="Crear" value="submit">Crear ticket</button>
                 <button class="Cancelar">Cancelar</button>
             </div>
 
-            <input type="hidden" name="categoriasSeleccionadas" id="categoriasSeleccionadas" value="">
         </form>
 
     </div>
