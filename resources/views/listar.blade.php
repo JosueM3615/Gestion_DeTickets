@@ -7,6 +7,7 @@
             <label for="titulo"> Titulo</label>
             <input type="text" name="titulo" class="tituloTicket">
 
+<<<<<<< HEAD
             <label for="descripcion"> Descripción</label>
             <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
 
@@ -16,6 +17,10 @@
             <label for="prioridad"> Seleccione prioridad</label>
 
             <select name="prioridad" id="prioridad">
+=======
+                <label for="prioridad"> Seleccione prioridad</label>
+                <select name="prioridad" id="prioridad">
+>>>>>>> ea75a99 (Modelos y relaciones)
                 <option value="1">Alta</option>
                 <option value="2">Muy alta</option>
                 <option value="3">Baja</option>
