@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     public function Index(){
-
+    return view('listatickets');
     } 
    
     public function store(Request $request){

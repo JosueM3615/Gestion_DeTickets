@@ -16,5 +16,5 @@ use App\Http\Controllers\TicketController;
 Route::get('/', function () {
     return view('listar');
 });
-
+Route::get('/index', [TicketController::class, 'index'])->name('ticket.listar');
 Route::post('/store', [TicketController::class, 'store'])->name('ticket.store');

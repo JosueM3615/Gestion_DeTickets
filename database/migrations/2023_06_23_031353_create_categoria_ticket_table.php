@@ -15,8 +15,8 @@ class CreateCategoriaTicketTable extends Migration
     {
         Schema::create('categoria_ticket', function (Blueprint $table) {
             $table->id();
-            $table->int('id_ticket');
-            $table->int('id_categoria');
+            $table->integer('id_ticket');
+            $table->integer('id_categoria');
         });
     }
 
