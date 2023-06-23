@@ -9,7 +9,10 @@ class categoria extends Model
 {
     protected $table = 'categoria';
 
-
+    protected $fillable = [
+        'Nombre'
+    ];
+    public $timestamps = false;
     public function tickets()
     {
         return $this->belongsToMany(ticket::class, 'categoria_ticket', 'id_categoria', 'id_ticket');
