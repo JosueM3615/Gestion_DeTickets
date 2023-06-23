@@ -33,13 +33,23 @@
     <div class="panelizq">
      
     <div class="navbar">
-        <h1>HOLA GAYS</h1>
+    
+   <div class="Bienvenida"> 
+    <p>Bienvenido!</p>
+    <img src="{{ asset('img/Saludo.png') }}" class="Saludo" alt=""> 
+
+    
+   <p>RebeMG99</p>
+    <img src="{{ asset('img/User.png') }}" class="User" alt=""> 
+   </div>
+
       </div> 
       <div class="contenidopanel">
         <div class="formulario">
             <form action="" class="contform">
+                
                 <label for="titulo"> Titulo</label>
-                <input type="text" name="titulo">
+                <input type="text" name="titulo" class="tituloTicket" >
 
                 <label for="descripcion"> Descripción</label>
                 <textarea name="descripcion" id="" cols="30" rows="10"></textarea>
@@ -60,9 +70,15 @@
                 <option value="2">Soporte</option>
                 <option value="3">Hardware</option>
                </select>
-               <button type="button"> Aceptar</button>
-               <button type="button"> Cancelar</button>
+               
+               <div id="miDiv">
+                <button class="Crear">Crear ticket</button>
+                <button class="Cancelar">Cancelar</button>
+              </div>
+               
+
             </form>
+
         </div>
       </div>
       
