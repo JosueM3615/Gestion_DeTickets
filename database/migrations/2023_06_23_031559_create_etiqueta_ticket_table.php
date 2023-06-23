@@ -15,8 +15,8 @@ class CreateEtiquetaTicketTable extends Migration
     {
         Schema::create('etiqueta_ticket', function (Blueprint $table) {
             $table->id();
-            $table->int('id_ticket');
-            $table->int('id_etiqueta');
+            $table->integer('id_ticket');
+            $table->integer('id_etiqueta');
         });
     }
 

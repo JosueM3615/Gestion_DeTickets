@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\categoria;
 use App\Models\CategoriaTicket;
+use App\Models\etiqueta;
 use App\Models\EtiquetaTicket;
 use App\Models\ticket;
 use Illuminate\Support\Facades\Validator;
@@ -13,12 +14,15 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     public function Index(){
-
+        $categorias = categoria::all();
+        $etiquetas = etiqueta::all();
+        
+        return view('crear', compact('categorias', 'etiquetas'));
     } 
    
     public function store(Request $request){
        
-        dd($request);
+        dd($request->post());
         $validator = Validator::make($request->all(), [
             'titulo' => 'required',
             'descripcion' => 'required',
