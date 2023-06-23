@@ -16,19 +16,19 @@
             <label for="etiqueta"> Seleccione etiqueta</label>
             <select name="etiqueta" id="etiqueta">
                 @foreach ($etiquetas as $etiqueta)
-                    <option value="{{ $etiqueta }}">{{ $etiqueta->Nombre }}</option>
+                    <option value="{{ $etiqueta->id_etiqueta }}">{{ $etiqueta->Nombre }}</option>
                 @endforeach
             </select>
 
             <select name="categoria" id="categoria" >
                 @foreach ($categorias as $categoria)
-                    <option value="{{ $categoria }}">{{ $categoria->Nombre }}</option>
+                    <option value="{{ $categoria->id_categoria }}">{{ $categoria->Nombre }}</option>
                 @endforeach
             </select>
 
             <select name="prioridad" id="prioridad" >
                 @foreach ($prioridades as $prioridad)
-                    <option value="{{ $prioridad }}">{{ $prioridad->Nombre }}</option>
+                    <option value="{{ $prioridad->id_prioridad }}">{{ $prioridad->Nombre }}</option>
                 @endforeach
             </select>
 

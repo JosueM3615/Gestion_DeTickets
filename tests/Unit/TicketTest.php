@@ -21,7 +21,6 @@ class TicketTest extends TestCase
      use RefreshDatabase;
     public function test_crear_ticket()
     {
-        $user = User::factory()->create();
 
         $categoria = new categoria();
         $categoria->Nombre = 'category1';
@@ -39,8 +38,7 @@ class TicketTest extends TestCase
         $prioridad->Nombre = 'prioridad1';
 
         $ticket = [
-            "id_estado" => $estado->id_estado,
-            "id_usuario" => $user->id_usuario,
+            "id_usuario" => 1,
             "id_categoria"=>$categoria->id_categoria,
             "id_etiqueta" => $etiqueta->id_etiqueta,
             "id_prioridad" => $prioridad->id_prioridad,
@@ -57,15 +55,19 @@ class TicketTest extends TestCase
 
     }
 
-    public function test_create_categoria() {
-        categoria::create([
-            'Nombre' => 'Categoria1'
-        ]);
+    public function testCrearCategoria()
+    {
+        // Crea una nueva instancia de la clase categoria
+        $categoria = new categoria();
 
-        $this->assertDatabaseHas('categoria',[
-            'Nombre' => 'Categoria1'
-        ]);
+        // Establece los valores de los atributos
+        $categoria->Nombre = 'Software';
 
+        // Guarda el registro en la base de datos
+        $categoria->save();
+
+        // Verifica que se haya guardado correctamente
+        $this->assertDatabaseHas('categoria', ['Nombre' => 'Software']);
     }
 
 }
