@@ -15,7 +15,10 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     public function Index(){
+        $categorias = categoria::all();
+        $etiquetas = etiqueta::all();
 
+        return view('crear', compact('categorias', 'etiquetas'));
     } 
    
     public function store(Request $request){
