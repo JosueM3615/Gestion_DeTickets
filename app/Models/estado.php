@@ -5,18 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class user extends Model
+class estado extends Model
 {
-    protected $table = 'users';
-
+ protected $table = 'estado';
     public $timestamps = false;
-
     protected $fillable = [
-        'id_rol',
+        'id_estado',
         'Nombre',
-        'Apellido',
-        'usuario',
-        'contraseña',
-        'Direccion'
     ]; 
 }

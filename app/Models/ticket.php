@@ -9,7 +9,7 @@ class ticket extends Model
 {
     use HasFactory;
     protected $table = 'ticket';
-   
+    public $timestamps = false;
     protected $fillable = [
         'id_usuario',
         'id_estado',
