@@ -15,7 +15,9 @@ class TicketController extends Controller
     public function Index()
     {
         $tickets = ticket::with('categorias')->get();
-        return view('listatickets', compact('tickets'));  
+
+        //dd($tickets);
+        return view('listatickets', compact('tickets'));
     }
 
     public function Vcrear()
@@ -29,7 +31,7 @@ class TicketController extends Controller
     public function store(Request $request)
     {
 
-        dd($request->post());
+        //dd($request->post());
 
         $validator = Validator::make($request->all(), [
             'titulo' => 'required',
@@ -53,7 +55,7 @@ class TicketController extends Controller
                 ]);
 
                 $nuevoticket->categorias()->attach($request->categoria);
-                $nuevoticket->etiquetas()->attach($request->etiqueta); 
+                $nuevoticket->etiquetas()->attach($request->etiqueta);
 
                 return ($nuevoticket);
 
