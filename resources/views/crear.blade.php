@@ -14,17 +14,24 @@
             <input type="file" id="file" name="archivo">
 
             <label for="etiqueta"> Seleccione etiqueta</label>
-            <select name="etiqueta[]" id="etiqueta">
+            <select name="etiqueta" id="etiqueta">
                 @foreach ($etiquetas as $etiqueta)
                     <option value="{{ $etiqueta }}">{{ $etiqueta->Nombre }}</option>
                 @endforeach
             </select>
 
-            <select name="categoria[]" id="categoria" >
+            <select name="categoria" id="categoria" >
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria }}">{{ $categoria->Nombre }}</option>
                 @endforeach
             </select>
+
+            <select name="prioridad" id="prioridad" >
+                @foreach ($prioridades as $prioridad)
+                    <option value="{{ $prioridad }}">{{ $prioridad->Nombre }}</option>
+                @endforeach
+            </select>
+
 
             <div id="miDiv">
                 <button class="Crear" value="submit">Crear ticket</button>
