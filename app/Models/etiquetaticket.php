@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class EtiquetaTicket extends Model
+class etiquetaticket extends Model
 {
     protected $table = 'etiqueta_ticket';
 
