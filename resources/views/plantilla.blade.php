@@ -9,8 +9,8 @@
 <body>
 <body>
 <div class="container">
+  
     <div class="Panelderecha">
-      
     <div class="presentacion">
        <h4>AMW Solutions</h4>
         <img src="{{ asset('img/logo.png') }}" class="img_logo" alt="">
@@ -31,21 +31,23 @@
     </div>
     
     <div class="panelizq">
-     
     <div class="navbar">
     
    <div class="Bienvenida"> 
-    <p>Bienvenido!</p>
+   <div class="divscontnav">
+       <p>Bienvenido!</p>
     <img src="{{ asset('img/Saludo.png') }}" class="Saludo" alt=""> 
+    </div> 
 
+    <div class="divscontnav"> <p>RebeMG99</p>
+    <img src="{{ asset('img/User.png') }}" class="User" alt=""> </div>
     
-   <p>RebeMG99</p>
-    <img src="{{ asset('img/User.png') }}" class="User" alt=""> 
+  
    </div>
 
       </div> 
       <div class="contenidopanel">
-        <div class="formulario">
+      <div class="formulario">
             <form action="" class="contform">
                 
                 <label for="titulo"> Titulo</label>
@@ -80,6 +82,7 @@
             </form>
 
         </div>
+        
       </div>
       
     </div>
