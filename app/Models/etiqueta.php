@@ -17,6 +17,6 @@ class etiqueta extends Model
 
     public function tickets()
     {
-        return $this->belongsToMany(ticket::class, 'etiquetaticket', 'id_etiqueta', 'id_ticket');
+        return $this->belongsToMany(ticket::class, 'etiqueta_ticket', 'id_etiqueta', 'id_ticket');
     }
 }

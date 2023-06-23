@@ -9,7 +9,7 @@ class categoriaticket extends Model
 {
     use HasFactory;
     protected $table = 'categoria_ticket';
-
+    public $timestamps = false;
     protected $fillable = [
         'id_ticket',
         'id_categoria'

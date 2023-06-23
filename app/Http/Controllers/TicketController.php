@@ -17,10 +17,12 @@ use PhpParser\Node\Expr\PostDec;
 class TicketController extends Controller
 {
     public function Index(){
-        $categorias = categoria::all();
-        $etiquetas = etiqueta::all();
-        $prioridades = prioridad::all();
-        return view('crear', compact('categorias', 'etiquetas','prioridades'));
+        // $categorias = categoria::all();
+        // $etiquetas = etiqueta::all();
+        // $prioridades = prioridad::all();
+        // return view('crear', compact('categorias', 'etiquetas','prioridades'));
+        $tickets = ticket::with('categorias')->get();
+        return view('listatickets', compact('tickets'));
     } 
    
     public function Vcrear(){
@@ -50,15 +52,19 @@ class TicketController extends Controller
             $errors = $validator->errors();
              return $errors;
          }
-if($idcategoria != 0 && $idEtiqueta != 0 || $idprioridad == 0) {
+      if($idcategoria != 0 && $idEtiqueta != 0 || $idprioridad == 0) {
          $nuevoticket = ticket::create([
              'id_usuario' => 1,
              'id_estado' => 1,
              'id_prioridad' => $idprioridad,
              'titulo' => $request->titulo,
              'descripcion' => $request->descripcion,
-         ]);
-    return($nuevoticket);
+         ]); 
+         
+         $nuevacategoria = CategoriaTicket::create(['id_ticket' => $nuevoticket->id,
+         'id_categoria' => $idcategoria]);
+         return($nuevacategoria);
+         
     }else{
         return("Hacen falta datos esenciales");
     }
