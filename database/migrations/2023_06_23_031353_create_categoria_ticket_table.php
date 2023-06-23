@@ -15,8 +15,10 @@ class CreateCategoriaTicketTable extends Migration
     {
         Schema::create('categoria_ticket', function (Blueprint $table) {
             $table->id();
-            $table->integer('id_ticket');
-            $table->integer('id_categoria');
+            $table->unsignedBigInteger('id_ticket');
+            $table->unsignedBigInteger('id_categoria');
+            $table->foreign('id_ticket')->references('id_ticket')->on('ticket');
+            $table->foreign('id_categoria')->references('id_categoria')->on('categoria');
         });
     }
 
