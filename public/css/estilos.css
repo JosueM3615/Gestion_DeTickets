@@ -4,13 +4,26 @@ body {
     font-family: Arial, sans-serif;
   }
 .menu_li:hover{
-    background-color: red;
+    background-color: #2F4050;
 }
 .presentacion{
     display: flex;
     flex-direction: column;
     align-items: center;
 
+}  
+ .botonCrear{
+  width: 140px;
+  height: 35px;
+  margin: 20px 0px 5px 411px;
+  border-radius: 5px;
+  border: none;
+  background-color:#1CB295;
+  color: white;
+  border: none;
+}
+.botonCrear:hover{
+  background-color: #2F4050;
 }
 .img_logo{
     width: 98px;
@@ -136,12 +149,25 @@ select{
   background-color: #1CB295;
   border-color: #1CB295;
 }
-
-.Cancelar {
-  background-color: #4A4A4A;
-  border-color: #292F45;
+.Crear:hover {
+    background-color: #2F4050;
 }
 
+
+.Cancelar {
+    display: inline-block;
+    background-color: #4A4A4A;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: center;
+    border-radius: 5px;
+    width: 80px;
+}
+.Cancelar:hover {
+  background-color: #EB5557;
+}
   .container {
     display: flex;
     height: 100vh;

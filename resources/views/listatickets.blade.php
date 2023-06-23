@@ -2,9 +2,15 @@
 
 @section('contenidopanelder')
 
+
+
 <table class="Tabla">
+    <form action="{{route('ticket.nuevo')}}" method="GET"> 
+    @csrf 
+    <button type="submit" class="botonCrear">Crear ticket</button>
+     </form>
     <tr class="TitulosTabla">
-        <th>Numero</th>
+        <th>Numero</th>s
         <th>Titulo</th>
         <th>Prioridad</th>
         <th>Estado</th>

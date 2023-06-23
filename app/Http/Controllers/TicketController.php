@@ -14,15 +14,16 @@ class TicketController extends Controller
 {
     public function Index()
     {
-        $categorias = categoria::all();
-        $etiquetas = etiqueta::all();
-        $prioridades = prioridad::all();
-        return view('crear', compact('categorias', 'etiquetas', 'prioridades'));
+        $tickets = ticket::with('categorias')->get();
+        return view('listatickets', compact('tickets'));  
     }
 
     public function Vcrear()
     {
-        return view('crear');
+        $categorias = categoria::all();
+        $etiquetas = etiqueta::all();
+        $prioridades = prioridad::all();
+        return view('crear', compact('categorias', 'etiquetas', 'prioridades'));
     }
 
     public function store(Request $request)
