@@ -34,7 +34,7 @@
 
             <div id="miDiv">
                 <button class="Crear" value="submit">Crear ticket</button>
-                <button class="Cancelar">Cancelar</button>
+                <a href="{{ route('inicio') }}" class="Cancelar">Cancelar</a>
             </div>
 
         </form>

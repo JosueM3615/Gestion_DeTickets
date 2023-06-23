@@ -14,6 +14,6 @@ use App\Http\Controllers\TicketController;
 */
 
 Route::get('/', [TicketController::class, 'index'])->name("inicio");
-
+Route::get('/nuevoticket', [TicketController::class, 'VCrear'])->name("ticket.nuevo");
 Route::get('/crear', [TicketController::class, 'store'])->name('ticket.store');
 Route::post('/store', [TicketController::class, 'store'])->name('ticket.store');
