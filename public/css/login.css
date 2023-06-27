@@ -1,0 +1,84 @@
+.flex {
+    display: flex;
+}
+.colum-flex {
+    flex-direction: column;
+}
+.row-flex {
+    flex-direction: row;
+}
+html,
+body {
+    background: #292f45;
+    color: #ffff;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.elipse {
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 231px;
+    background: rgba(83, 93, 126, 0.58);
+}
+
+.contenido {
+    border-radius: 4px;
+    border: 1px solid #4a4a4a;
+    background: rgba(217, 217, 217, 0);
+    gap: 50px;
+    align-items: center;
+    width: 400px;
+    padding: 15px;
+}
+.contenedor-form {
+    gap: 35px;
+}
+.formulario {
+    gap: 20px;
+}
+
+.formulario div {
+    gap: 5px;
+}
+.underline-input {
+    background-color: transparent !important;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    outline: none;
+}
+.underline-input::placeholder {
+    color: #bbb9b9;
+    font-size: 12px;
+}
+
+.btn-olvide {
+    color: white;
+    font-size: 12px;
+}
+.btn-ingresar {
+    width: 250px;
+    height: 30px;
+    background: #19CC68;
+    color: #ffff;
+    border: none;
+    font-size: 16px;
+}
+.seccion-ingresar{
+    gap: 10px;
+}
+.copy {
+    align-items: center;
+    font-size: 12px;
+}
+
+.copy span {
+    font-weight: bold;
+}

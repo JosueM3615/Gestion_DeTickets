@@ -57,7 +57,7 @@ class TicketController extends Controller
                 $nuevoticket->categorias()->attach($request->categoria);
                 $nuevoticket->etiquetas()->attach($request->etiqueta);
 
-                return ($nuevoticket);
+                return redirect()->action([TicketController::class, 'index']);
 
             } catch (Exception $e) {
                 return ($e->getMessage());

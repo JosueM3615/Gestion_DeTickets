@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
 /*
@@ -13,7 +14,10 @@ use App\Http\Controllers\TicketController;
 |
 */
 
-Route::get('/', [TicketController::class, 'index'])->name("inicio");
+Route::get('/', [SessionController::class, 'index'])->name("login");
+Route::post('/', [SessionController::class, 'login'])->name("login");
+
+Route::get('/dashboard', [TicketController::class, 'index'])->name("inicio");
 Route::get('/nuevoticket', [TicketController::class, 'VCrear'])->name("ticket.nuevo");
 Route::get('/crear', [TicketController::class, 'store'])->name('ticket.store');
 Route::post('/store', [TicketController::class, 'store'])->name('ticket.store');

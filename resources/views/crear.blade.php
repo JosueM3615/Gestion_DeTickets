@@ -19,13 +19,13 @@
                     <option value="{{ $etiqueta->id_etiqueta }}">{{ $etiqueta->Nombre }}</option>
                 @endforeach
             </select>
-
+            <label for="categoria ">Categoria</label>
             <select name="categoria" id="categoria">
                 @foreach ($categorias as $categoria)
                     <option value="{{ $categoria->id_categoria }}">{{ $categoria->Nombre }}</option>
                 @endforeach
             </select>
-
+            <label for="prioridad">Prioridad</label>
             <select name="prioridad" id="prioridad">
                 @foreach ($prioridades as $prioridad)
                     <option value="{{ $prioridad->id_prioridad }}">{{ $prioridad->Nombre }}</option>

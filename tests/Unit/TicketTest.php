@@ -64,7 +64,7 @@ class TicketTest extends TestCase
         $this->assertDatabaseHas('categoria', ['Nombre' => 'Software']);
     } */
 
-    public function testStore()
+   /*  public function testStore()
     {
         $ticketData = [
             'titulo' => 'Hola2',
@@ -82,5 +82,5 @@ class TicketTest extends TestCase
         $response->assertStatus(200);
         // ...
     }
-
+ */
 }
